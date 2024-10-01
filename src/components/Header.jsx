@@ -20,7 +20,7 @@ const Header = ({ setWeatherData }) => {
       return;
     }
 
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=${keyApi}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=${keyApi}`;
     try {
       const response = await axios.get(url);
       setSuggestions(response.data);
@@ -30,7 +30,7 @@ const Header = ({ setWeatherData }) => {
   };
 
   const handleSuggestionClick = async (lat, lon) => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${keyApi}&units=metric&lang=fr`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${keyApi}&units=metric&lang=fr`;
     try {
       const response = await axios.get(url);
       setWeatherData(response.data);
