@@ -9,7 +9,8 @@ import "../style/Header.css";
 const Header = ({ setWeatherData }) => {
   const [city, setCity] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const keyApi = process.env.REACT_APP_API_KEY;
+
+  const keyApi = "f309c589d373d48b54b0f3783de6bd44";
 
   const suggestionsRef = useRef(null);
 
